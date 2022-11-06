@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-sm navbar-light" id="neubar">
+    <div class="container">
+      <a class="navbar-brand" routerLink="">Nordic Door</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link mx-2" aria-current="page" routerLink="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a
+              *ngIf="!signupService.isLoggedIn()"
+              class="nav-link mx-2"
+              routerLink="/login"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              *ngIf="!signupService.isLoggedIn()"
+              class="nav-link mx-2"
+              routerLink="/signup"
+              >Sign Up</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              *ngIf="signupService.isLoggedIn()"
+              class="nav-link mx-2"
+              style="cursor: pointer"
+              routerLink="/dashboard"
+              >Dashboard</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              *ngIf="signupService.isLoggedIn()"
+              class="nav-link mx-2"
+              style="cursor: pointer"
+              routerLink="/teamdetails"
+              >Teams</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              *ngIf="signupService.isLoggedIn()"
+              class="nav-link mx-2"
+              style="cursor: pointer"
+              routerLink="/suggestions"
+              >Suggestions</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              *ngIf="signupService.isLoggedIn()"
+              class="nav-link mx-2"
+              style="cursor: pointer"
+              (click)="signupService.isLoggedOut()"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

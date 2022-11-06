@@ -1,0 +1,100 @@
+#title {
+    background-color: #ededed;
+    color: black;
+  }
+  .title-img {
+    width: 50%;
+    transform: rotate(35deg);
+    position: static;
+    margin-left: 20%;
+  }
+  h1 {
+    font-family: "Montserrat-Black", sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    padding-bottom: 5rem;
+  }
+  .container-fluid {
+    padding: 3% 15% 5% 15%;
+  }
+  body {
+    font-family: "Montserrat-Black", sans-serif;
+  }
+  
+  .features {
+    background-color: #aebdca;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    position: static;
+    text-align: center;
+  }
+  .signs {
+    color: #ef8172;
+    padding-bottom: 3%;
+  }
+  .signs:hover {
+    color: #ff4c68;
+  }
+  h2 {
+    font-family: Montserrat-Black;
+    text-size: 1.5rem;
+    line-height: 1.5;
+  }
+  h3 {
+    font-family: Montserrat-Black;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  p {
+    color: #8f8f8f;
+  }
+  
+  p {
+    color: black;
+  }
+  
+  #cta {
+    background-color: #ededed;
+    color: black;
+    text-align: center;
+    padding: 7% 15%;
+  }
+  .cta-heading {
+    font-family: Montserrat-Black;
+    line-height: 1.5;
+    font-size: 3.5rem;
+    margin-bottom: 5%;
+  }
+  .suggestion-button {
+    margin-right: 2%;
+  }
+  
+  /* Footer section*/
+  #footer {
+    background-color: #aebdca;
+    padding: 3% 15%;
+    text-align: center;
+  }
+  .footer-link {
+    padding-right: 3%;
+    width: 10%;
+  }
+  .fab:hover {
+    color: aquamarine;
+  }
+  .copyright {
+    margin-top: 3%;
+  }
+  
+  @media (max-width: 1028px) {
+    .title-img {
+      width: 60%;
+      right: 25%;
+      position: static;
+      transform: rotate(0);
+    }
+    #title {
+      text-align: center;
+    }
+  }
+  
