@@ -1,6 +1,76 @@
-<h1>Teams</h1>
-<ul *ngFor="let team of teams">
-    <li>
-  {{team.teamId}} {{team.teamName}} {{team.teamLeader}}
-</li>
-</ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <nav>
+        <ul>
+          <li class="logo">
+            <img
+              src="https://www.pngfind.com/pngs/m/470-4703547_icon-user-icon-hd-png-download.png"
+            />
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa fa-home"></i>&nbsp; Welcome
+              {{ currentUser.username }}</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa fa-address-card"></i>&nbsp;
+              {{ employee.jobTitle }}</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa fa-envelope"></i>&nbsp; {{ employee.email }}</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa fa-phone"></i>&nbsp; {{ employee.phoneNumber }}</a
+            >
+          </li>
+          <li>
+            <a routerLink="editemployee"
+              ><i class="fa fa-edit"></i>&nbsp; Edit Profile</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-10 suggestion-list">
+      <h3 style="text-align: center">Your Suggestion List</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Suggestion Date</th>
+            <th scope="col">Description</th>
+            <th scope="col">Deadline</th>
+            <th scope="col">Resposible Team</th>
+            <th scope="col">Status</th>
+            <th scope="col">Priority Level</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let suggestion of suggesListOfCurrentUser">
+          <tr>
+            <td>{{ suggestion.suggestionTitle }}</td>
+            <td>{{ suggestion.suggestionDate }}</td>
+            <td>{{ suggestion.suggestionDescription }}</td>
+            <td>{{ suggestion.suggestionDeadline }}</td>
+            <td>{{ suggestion.teamName }}</td>
+            <td>{{ suggestion.suggestionStatus }}</td>
+            <td>{{ suggestion.priorityLevel }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button
+        type="button"
+        class="btn btn-dark btn-lg suggestion-button"
+        routerLink="/make-suggestion"
+      >
+        Make Suggestion
+      </button>
+    </div>
+  </div>
+</div>
