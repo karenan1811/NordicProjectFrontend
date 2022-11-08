@@ -7,9 +7,13 @@ import { Router } from '@angular/router';
 })
 export class EmployeeService {
 urlSingleEmployee : string = 'https://localhost:7116/api/Employee/getsingleemployee?username=';
+urlUpdateEmployee : string = 'https://localhost:7116/api/Employee/update';
 
   constructor(private httpClient : HttpClient, private router :Router) {}
   getEmployeeByUsername(username:any){
     return this.httpClient.get(this.urlSingleEmployee + username);
+  }
+  updateEmployee(employee:any){
+    return this.httpClient.post(this.urlUpdateEmployee, employee);
   }
 }

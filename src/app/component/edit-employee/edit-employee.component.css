@@ -1,6 +1,6 @@
 .outer {
     height: 300vh;
-    background-color: #aebdca;
+    background: linear-gradient(to top, #c9d6df 50%, #b4846c 90%) no-repeat;
   }
   .panel {
     width: 80vh;
@@ -81,6 +81,4 @@
     background-color: #fff;
     padding: 0 8px;
   }
-  label{
-    margin-right: 1rem;
-  }
+  

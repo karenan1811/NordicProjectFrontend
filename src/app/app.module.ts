@@ -10,6 +10,8 @@ import {HttpClientModule} from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './component/home/home.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
+import { MakeSuggestionComponent } from './component/make-suggestion/make-suggestion.component';
+import { EditEmployeeComponent } from './component/edit-employee/edit-employee.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NavbarComponent } from './component/navbar/navbar.component';
     SignupComponent,
     DashboardComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    MakeSuggestionComponent,
+    EditEmployeeComponent
   ],
   imports: [
     BrowserModule,

@@ -4,17 +4,11 @@
         <div class="offsett-md-2 col-lg-5 col-md-7 offsett-lg-4 offset-md-3">
           <div class="panel border bg-white">
             <div class="panel-heading">
-              <h3 class="pt-3 font-weight-bold">Sign Up</h3>
+              <h3 class="pt-3 font-weight-bold">Edit Employee</h3>
               <div class="panel-body p-3">
-                <form [formGroup]="signupForm">
+                <form [formGroup]="updateForm">
                   <div class="form-group pt-3">
-                    <div
-                      class="input-field"
-                      [class.error]="
-                        signupForm.controls['firstName'].dirty &&
-                        signupForm.hasError('required', 'firstName')
-                      "
-                    >
+                    <div class="input-field">
                       <span class="fa fa-user p-2"></span
                       ><input
                         formControlName="firstName"
@@ -23,23 +17,9 @@
                         placeholder="First Name"
                       />
                     </div>
-                    <small
-                      *ngIf="
-                        signupForm.controls['firstName'].dirty &&
-                        signupForm.hasError('required', 'firstName')
-                      "
-                      class="text-danger"
-                      >*Firstname is required</small
-                    >
                   </div>
                   <div class="form-group pt-3">
-                    <div
-                      class="input-field"
-                      [class.error]="
-                        signupForm.controls['lastName'].dirty &&
-                        signupForm.hasError('required', 'lastName')
-                      "
-                    >
+                    <div class="input-field">
                       <span class="fa fa-user p-2"></span
                       ><input
                         formControlName="lastName"
@@ -48,23 +28,9 @@
                         placeholder="Last Name"
                       />
                     </div>
-                    <small
-                      *ngIf="
-                        signupForm.controls['lastName'].dirty &&
-                        signupForm.hasError('required', 'lastName')
-                      "
-                      class="text-danger"
-                      >*Lastname is required</small
-                    >
                   </div>
                   <div class="form-group pt-3">
-                    <div
-                      class="input-field"
-                      [class.error]="
-                        signupForm.controls['email'].dirty &&
-                        signupForm.hasError('required', 'email')
-                      "
-                    >
+                    <div class="input-field">
                       <span class="fa fa-user p-2"></span
                       ><input
                         formControlName="email"
@@ -73,64 +39,6 @@
                         placeholder="Email"
                       />
                     </div>
-                    <small
-                      *ngIf="
-                        signupForm.controls['email'].dirty &&
-                        signupForm.hasError('required', 'email')
-                      "
-                      class="text-danger"
-                      >*Email is required</small
-                    >
-                  </div>
-                  <div class="form-group pt-3">
-                    <div
-                      class="input-field"
-                      [class.error]="
-                        signupForm.controls['username'].dirty &&
-                        signupForm.hasError('required', 'username')
-                      "
-                    >
-                      <span class="fa fa-user p-2"></span
-                      ><input
-                        formControlName="username"
-                        type="text"
-                        class="text"
-                        placeholder="Username"
-                      />
-                    </div>
-                    <small
-                      *ngIf="
-                        signupForm.controls['username'].dirty &&
-                        signupForm.hasError('required', 'username')
-                      "
-                      class="text-danger"
-                      >*Username is required</small
-                    >
-                  </div>
-                  <div class="form-group pt-3">
-                    <div
-                      class="input-field"
-                      [class.error]="
-                        signupForm.controls['password'].dirty &&
-                        signupForm.hasError('required', 'password')
-                      "
-                    >
-                      <span class="fa fa-lock p-2"></span
-                      ><input
-                        formControlName="password"
-                        type="password"
-                        class="text"
-                        placeholder="Password"
-                      />
-                    </div>
-                    <small
-                      *ngIf="
-                        signupForm.controls['password'].dirty &&
-                        signupForm.hasError('required', 'password')
-                      "
-                      class="text-danger"
-                      >*Password is required</small
-                    >
                   </div>
                   <div class="form-group pt-3">
                     <div class="input-field">
@@ -158,7 +66,7 @@
                     <div class="input-field">
                       <span class="fa fa-user p-2"></span
                       >
-                      <label>Birthdate:</label>
+                      <label>Birthday</label>
                       <input
                         formControlName="birthday"
                         type="date"
@@ -170,7 +78,8 @@
                   <div class="form-group pt-3">
                     <div class="input-field">
                       <span class="fa fa-user p-2"></span
-                      ><label>Employment Start Date:</label>
+                      >
+                      <label>Employment Start Date</label>
                       <input
                         formControlName="employmentStartDate"
                         type="date"
@@ -202,16 +111,12 @@
                     </div>
                   </div>
                   <button
-                    (click)="onSignUp()"
+                    (click)="onUpdate()"
                     type="submit"
                     class="btn btn-primary btn-block mt-4 w-100"
                   >
-                    Sign Up
+                    Update
                   </button>
-                  <div class="text-center pt-4 text-muted">
-                    Already have an account?
-                    <a id="forget" routerLink="/login">Login</a>
-                  </div>
                 </form>
               </div>
             </div>
