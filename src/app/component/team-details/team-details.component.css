@@ -1,0 +1,58 @@
+.list-group {
+    width: 100%;
+    text-align: left;
+  }
+  .list-group-item {
+    background-color: #eaeaea;
+  }
+  .container {
+      margin-left: 0px;
+    }
+    .teams {
+      padding-top: 2%;
+      background-color: #6b728e;
+      height: 100vh;
+    }
+    .team-details {
+      padding-top: 2%;
+      color: black;
+      text-align: center;
+      align-items: center;
+      padding-left: 1%;
+    }
+    .list-group-item {
+      background-color: #eaeaea;
+    }
+    .active {
+      color: #6b728e;
+    }
+    h3 {
+      color: black;
+    }
+    .header-details {
+      text-align: center;
+    }
+    table {
+      text-align: center;
+    }
+    tbody {
+      background-color: #6b728e;
+      color: #fff;
+    }
+    tr td {
+      color: #fff;
+    }
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+    .team-button {
+      margin-left: 20%;
+      margin-top: 5%;
+      background-color: cornflowerblue;
+    }
+    ul {
+      list-style: none;
+    }
+    

@@ -1,0 +1,73 @@
+<div class="outer">
+    <div class="container">
+      <div class="row">
+        <div class="offsett-md-2 col-lg-5 col-md-7 offsett-lg-4 offset-md-3">
+          <div class="panel border bg-white">
+            <div class="panel-heading">
+              <h3 class="pt-3 font-weight-bold">Add New Team Form</h3>
+              <div class="panel-body p-3">
+                <form [formGroup]="teamForm">
+                  <div class="form-group pt-3">
+                    <div
+                      class="input-field"
+                      [class.error]="
+                        teamForm.controls['teamName'].dirty &&
+                        teamForm.hasError('required', 'teamName')
+                      "
+                    >
+                      <span class="fa fa-file p-2"></span
+                      ><input
+                        formControlName="teamName"
+                        type="text"
+                        class="text"
+                        placeholder="Team Name"
+                      />
+                    </div>
+                    <small
+                      *ngIf="
+                        teamForm.controls['teamName'].dirty &&
+                        teamForm.hasError('required', 'teamName')
+                      "
+                      class="text-danger"
+                      >*Team Name is required</small
+                    >
+                  </div>
+                  <div
+                    class="input-field"
+                    [class.error]="
+                      teamForm.controls['teamLeader'].dirty &&
+                      teamForm.hasError('required', 'teamLeader')
+                    "
+                  >
+                    <span class="fa fa-file p-2"></span
+                    ><input
+                      formControlName="teamLeader"
+                      type="text"
+                      class="text"
+                      placeholder="Team Leader"
+                    />
+                  </div>
+                  <small
+                    *ngIf="
+                      teamForm.controls['teamLeader'].dirty &&
+                      teamForm.hasError('required', 'teamLeader')
+                    "
+                    class="text-danger"
+                    >*Team Leader is required</small
+                  >
+                  <button
+                    (click)="onClick()"
+                    type="submit"
+                    class="btn btn-primary btn-block mt-4 w-100"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

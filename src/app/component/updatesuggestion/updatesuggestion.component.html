@@ -4,17 +4,11 @@
         <div class="offsett-md-2 col-lg-5 col-md-7 offsett-lg-4 offset-md-3">
           <div class="panel border bg-white">
             <div class="panel-heading">
-              <h3 class="pt-3 font-weight-bold">Suggestion Form</h3>
+              <h3 class="pt-3 font-weight-bold">Update Suggestion</h3>
               <div class="panel-body p-3">
                 <form [formGroup]="suggestionForm">
                   <div class="form-group pt-3">
-                    <div
-                      class="input-field"
-                      [class.error]="
-                        suggestionForm.controls['suggestionTitle'].dirty &&
-                        suggestionForm.hasError('required', 'suggestionTitle')
-                      "
-                    >
+                    <div class="input-field">
                       <span class="fa fa-file p-2"></span
                       ><input
                         formControlName="suggestionTitle"
@@ -23,14 +17,6 @@
                         placeholder="Suggestion Title"
                       />
                     </div>
-                    <small
-                      *ngIf="
-                        suggestionForm.controls['suggestionTitle'].dirty &&
-                        suggestionForm.hasError('required', 'suggestionTitle')
-                      "
-                      class="text-danger"
-                      >*Suggestion Title is required</small
-                    >
                   </div>
                   <div class="form-group pt-3">
                     <div class="input-field">
@@ -40,6 +26,17 @@
                         type="text"
                         class="text"
                         placeholder="Priority Level"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group pt-3">
+                    <div class="input-field">
+                      <span class="fa fa-bell p-2"></span
+                      ><input
+                        formControlName="suggestionResult"
+                        type="text"
+                        class="text"
+                        placeholder="Suggestion Result"
                       />
                     </div>
                   </div>
@@ -66,32 +63,6 @@
                     </div>
                   </div>
                   <div class="form-group pt-3">
-                    <div
-                      class="input-field"
-                      [class.error]="
-                        suggestionForm.controls['suggestionDate'].dirty &&
-                        suggestionForm.hasError('required', 'suggestionDate')
-                      "
-                    >
-                      <label>Suggestion Date:</label>
-                      <input
-                        formControlName="suggestionDate"
-                        type="date"
-                        class="text"
-                        style="margin-left: 10px"
-                        placeholder="Suggestion Date"
-                      />
-                    </div>
-                    <small
-                      *ngIf="
-                        suggestionForm.controls['suggestionDate'].dirty &&
-                        suggestionForm.hasError('required', 'suggestionDate')
-                      "
-                      class="text-danger"
-                      >*Suggestion Date is required</small
-                    >
-                  </div>
-                  <div class="form-group pt-3">
                     <div class="input-field">
                       <label>Suggestion Deadline:</label>
                       <input
@@ -113,7 +84,7 @@
                     </div>
                   </div>
                   <button
-                    (click)="onMakeSuggestion()"
+                    (click)="onUpdateSuggestion()"
                     type="submit"
                     class="btn btn-primary btn-block mt-4 w-100"
                   >

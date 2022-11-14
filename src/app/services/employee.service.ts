@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 export class EmployeeService {
 urlSingleEmployee : string = 'https://localhost:7116/api/Employee/getsingleemployee?username=';
 urlUpdateEmployee : string = 'https://localhost:7116/api/Employee/update';
+urlEmployeeByTeamName : string = 'https://localhost:7116/api/Employee/getemployeesbyteamname?teamName=';
+urlAddNewMemberTeam : string = 'https://localhost:7116/api/Employee/changeemployeeteam';
 
   constructor(private httpClient : HttpClient, private router :Router) {}
   getEmployeeByUsername(username:any){
@@ -15,5 +17,11 @@ urlUpdateEmployee : string = 'https://localhost:7116/api/Employee/update';
   }
   updateEmployee(employee:any){
     return this.httpClient.post(this.urlUpdateEmployee, employee);
+  }
+  getEmployeeByTeamName(teamName:any){
+    return this.httpClient.get(this.urlEmployeeByTeamName + teamName)
+  }
+  updateEmployeeTeam(data: any) {
+    return this.httpClient.post(this.urlAddNewMemberTeam, data);
   }
 }

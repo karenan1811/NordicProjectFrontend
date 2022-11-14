@@ -1,0 +1,41 @@
+<div class="suggestion">
+    <h3 style="text-align: center">Suggestion Lists</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Date</th>
+          <th scope="col">Deadline</th>
+          <th scope="col">Description</th>
+          <th scope="col">Suggestion Giver</th>
+          <th scope="col">Responsible Team</th>
+          <th scope="col">Status</th>
+          <th scope="col">Result</th>
+          <th scope="col">Update</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let suggestion of suggestions">
+        <tr>
+          <td>{{ suggestion.suggestionTitle }}</td>
+          <td>{{ suggestion.suggestionDate }}</td>
+          <td>{{ suggestion.suggestionDeadline }}</td>
+          <td>{{ suggestion.suggestionDescription }}</td>
+          <td>{{ suggestion.suggestionGiver }}</td>
+          <td>{{ suggestion.teamName }}</td>
+          <td>{{ suggestion.suggestionStatus }}</td>
+          <td>{{ suggestion.suggestionResult }}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-dark btn-lg suggestion-button"
+              routerLink="/update-suggestion"
+              (click)="getCurrentSuggestion(suggestion)"
+            >
+              Update
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,84 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 teams">
+        <h3>Teams</h3>
+        <ul class="list-group" *ngFor="let team of teams">
+          <li class="list-group-item" [class]="makeCurrentTeamActive(team)">
+            <a (click)="getTeam(team)">{{ team.teamName }}</a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="btn btn-dark btn-lg team-button"
+          routerLink="/new-team"
+        >
+          Add New Team
+        </button>
+      </div>
+      <div class="col-md-9 team-details">
+        <h3 class="header-details">Team Member Details</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Team Name</th>
+              <th scope="col">Team Leader</th>
+              <th scope="col">Team Members</th>
+              <th scope="col">Team Suggestions</th>
+            </tr>
+          </thead>
+          <tbody *ngIf="currentTeam">
+            <tr>
+              <td>{{ currentTeam.teamName }}</td>
+              <td>{{ currentTeam.teamLeader }}</td>
+              <td>
+                <ul *ngFor="let employee of employees">
+                  <li>{{ employee.firstName }} {{ employee.lastName }}</li>
+                  <hr />
+                </ul>
+                <label for="fname">First name:</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  #fname
+                  (keyup)="keyUp(fname.value)"
+                /><br /><br />
+                <label for="lname">Last name:</label>
+                <input
+                  type="text"
+                  id="lname"
+                  name="lname"
+                  #lname
+                  (keyup)="onKeyUp(lname.value)"
+                /><br /><br />
+                <button
+                  type="button"
+                  class="btn btn-dark btn-lg team-button"
+                  (click)="addNewMember()"
+                >
+                  Add New Member
+                </button>
+              </td>
+              <td>
+                <ul *ngFor="let suggestion of suggestions">
+                  <li>
+                    {{ suggestion.suggestionTitle }}
+                    <hr />
+                  </li>
+                </ul>
+                <button
+                  type="button"
+                  class="btn btn-dark btn-lg team-button"
+                  routerLink="/suggestions"
+                >
+                  See Details
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+

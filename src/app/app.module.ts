@@ -12,6 +12,11 @@ import { HomeComponent } from './component/home/home.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { MakeSuggestionComponent } from './component/make-suggestion/make-suggestion.component';
 import { EditEmployeeComponent } from './component/edit-employee/edit-employee.component';
+import { SuggestionComponent } from './component/suggestion/suggestion.component';
+import { UpdateSuggestionComponent } from './component/updatesuggestion/updatesuggestion.component';
+import { TeamComponent } from './component/team/team.component';
+import { NewTeamComponent } from './component/new-team/new-team.component';
+import { TeamDetailsComponent } from './component/team-details/team-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { EditEmployeeComponent } from './component/edit-employee/edit-employee.c
     HomeComponent,
     NavbarComponent,
     MakeSuggestionComponent,
-    EditEmployeeComponent
+    EditEmployeeComponent,
+    SuggestionComponent,
+    UpdateSuggestionComponent,
+    TeamComponent,
+    NewTeamComponent,
+    TeamDetailsComponent
   ],
   imports: [
     BrowserModule,

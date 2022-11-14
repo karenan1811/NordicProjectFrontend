@@ -1,0 +1,8 @@
+<ul class="list-group" *ngFor="let team of teams">
+    <li class="list-group-item">
+      <a (click)="getTeam(team)" routerLink="teamdetail/:{{ team.teamId }}">{{
+        team.teamName
+      }}</a>
+    </li>
+  </ul>
+  

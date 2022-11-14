@@ -36,7 +36,6 @@ export class MakeSuggestionComponent implements OnInit {
       suggestionStatus: '',
       suggestionGiver: this.currentUser.username,
       suggestionDeadline: new Date('1000-01-01'),
-      suggestionImage: '',
       teamName: '',    
     });
   }
