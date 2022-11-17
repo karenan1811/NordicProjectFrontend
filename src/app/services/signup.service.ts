@@ -6,8 +6,8 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class SignupService {
-signupUrl:string="https://localhost:7116/api/Auth/register";
-loginUrl:string="https://localhost:7116/api/Auth/login";
+signupUrl:string="https://localhost:55000/api/Auth/register";
+loginUrl:string="https://localhost:55000/api/Auth/login";
   constructor(private httpClient:HttpClient, private router:Router) { }
   employeeRegister(employee:any){
  return this.httpClient.post(this.signupUrl,employee);

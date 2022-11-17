@@ -6,8 +6,8 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class TeamService {
-  baseUrl: string = 'https://localhost:7116/api/Team';
-  addUrl: string = 'https://localhost:7116/api/Team/add';
+  baseUrl: string = 'https://localhost:55000/api/Team';
+  addUrl: string = 'https://localhost:55000/api/Team/add';
   constructor(private httpClient: HttpClient) {}
   getTeams() {
     return this.httpClient.get(this.baseUrl);

@@ -6,10 +6,10 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class EmployeeService {
-urlSingleEmployee : string = 'https://localhost:7116/api/Employee/getsingleemployee?username=';
-urlUpdateEmployee : string = 'https://localhost:7116/api/Employee/update';
-urlEmployeeByTeamName : string = 'https://localhost:7116/api/Employee/getemployeesbyteamname?teamName=';
-urlAddNewMemberTeam : string = 'https://localhost:7116/api/Employee/changeemployeeteam';
+urlSingleEmployee : string = 'https://localhost:55000/api/Employee/getsingleemployee?username=';
+urlUpdateEmployee : string = 'https://localhost:55000/api/Employee/update';
+urlEmployeeByTeamName : string = 'https://localhost:55000/api/Employee/getemployeesbyteamname?teamName=';
+urlAddNewMemberTeam : string = 'https://localhost:55000/api/Employee/changeemployeeteam';
 
   constructor(private httpClient : HttpClient, private router :Router) {}
   getEmployeeByUsername(username:any){

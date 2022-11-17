@@ -5,11 +5,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SuggestionService {
-  url: string ='https://localhost:7116/api/Suggestion';
-  urlUpdateSuggestion: string = 'https://localhost:7116/api/Suggestion/update';
-  urlAddSuggestion: string ='https://localhost:7116/api/Suggestion/add';
-  urlSuggestionByUsername: string = 'https://localhost:7116/api/Suggestion/getsuggestionbyusername?userName=';
-  urlSuggestionByTeamName : string = 'https://localhost:7116/api/Suggestion/getsuggestionbyteamname?teamName=';
+  url: string ='https://localhost:55000/api/Suggestion';
+  urlUpdateSuggestion: string = 'https://localhost:55000/api/Suggestion/update';
+  urlAddSuggestion: string ='https://localhost:55000/api/Suggestion/add';
+  urlSuggestionByUsername: string = 'https://localhost:55000/api/Suggestion/getsuggestionbyusername?userName=';
+  urlSuggestionByTeamName : string = 'https://localhost:55000/api/Suggestion/getsuggestionbyteamname?teamName=';
   
   constructor(private httpClient: HttpClient) { }
 getSuggestions(){
