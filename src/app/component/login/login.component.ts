@@ -62,6 +62,7 @@ export class LoginComponent implements OnInit {
             localStorage.setItem('token', res.token);
             localStorage.setItem('user', JSON.stringify(res));
             localStorage.setItem('username', JSON.stringify(res.username));
+            localStorage.setItem('employeerole',JSON.stringify(res.employeeRole))
             this.currentUserSource.next(user);
             //localStorage.setItem('username', res.username);
             //alert(res.message);
@@ -84,6 +85,7 @@ export class LoginComponent implements OnInit {
   setCurrentUser(user: User) {
     this.currentUserSource.next(user);
   }
+  
   private validateAllFormFields(formGroup: FormGroup) {
     Object.keys(formGroup.controls).forEach((field) => {
       const control = formGroup.get(field);

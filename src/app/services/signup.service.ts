@@ -19,10 +19,14 @@ loginUrl:string="https://localhost:55000/api/Auth/login";
    localStorage.removeItem('token');
    localStorage.removeItem('user');
    localStorage.removeItem('username');
+   localStorage.removeItem('employeerole');
    this.router.navigate(['/']);
   }
   getToken() {
     return localStorage.getItem('token');
+  }
+  getEmployeeRole(){
+    return JSON.parse(localStorage.getItem('employeerole')||'{}');
   }
   getCurrentUser() {
     return localStorage.getItem('user');

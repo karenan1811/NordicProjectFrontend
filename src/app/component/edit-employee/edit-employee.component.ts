@@ -34,6 +34,7 @@ export class EditEmployeeComponent implements OnInit {
       employmentStartDate: new Date('1000-01-01'),
       jobTitle: '',
       teamName:'',
+      employeeRole:''
     });
   }
   onUpdate() {

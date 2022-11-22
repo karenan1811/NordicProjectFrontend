@@ -28,6 +28,7 @@ export class SignupComponent implements OnInit {
       employmentStartDate: '',
       jobTitle: '',
       teamName: '',
+      employeeRole:''
   });
 }
 onSignUp() {

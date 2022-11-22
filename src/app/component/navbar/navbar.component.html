@@ -28,10 +28,10 @@
           </li>
           <li class="nav-item">
             <a
-              *ngIf="!signupService.isLoggedIn()"
+              *ngIf="signupService.isLoggedIn() && signupService.getEmployeeRole()==='Admin'"
               class="nav-link mx-2"
               routerLink="/signup"
-              >Sign Up</a
+              >Register New Employee</a
             >
           </li>
           <li class="nav-item">

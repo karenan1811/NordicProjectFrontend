@@ -3,7 +3,7 @@
     background: linear-gradient(to top, #c9d6df 50%, #ededed 90%) no-repeat;
   }
   .panel {
-    width: 100vh;
+    width: 60vh;
   }
   .panel-heading {
     text-align: center;

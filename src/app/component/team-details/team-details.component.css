@@ -46,13 +46,23 @@
     th,
     td {
       border: 1px solid black;
+      text-align: center;
+      align-items: center;
     }
     .team-button {
-      margin-left: 20%;
+      text-align: center;
+      align-items: center;
       margin-top: 5%;
       background-color: cornflowerblue;
     }
     ul {
       list-style: none;
     }
+    label{
+      margin-right: 8px;
+    }
+    input{
+      width:70%;
+    }
+ 
     

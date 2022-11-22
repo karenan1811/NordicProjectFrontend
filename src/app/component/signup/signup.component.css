@@ -1,12 +1,21 @@
 .outer {
     height: 300vh;
     background-color: #aebdca;
+    align-items: center;
+    text-align: center;
   }
   .panel {
-    width: 80vh;
+    width: 60vh;
+    text-align: center;
+    align-items: center;
+  }
+  .outerlook{
+    text-align: center;
+    align-items: center;
   }
   .panel-heading {
     text-align: center;
+    align-items: center;
     margin-bottom: 10px;
   }
   #forget {
@@ -24,7 +33,7 @@
     cursor: pointer;
   }
   .btn {
-    margin-top: 20px;
+    margin-top: 60px;
     border-radius: 15px;
   }
   .panel {
@@ -83,4 +92,7 @@
   }
   label{
     margin-right: 1rem;
+  }
+  select{
+    width: 200px;
   }

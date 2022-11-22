@@ -11,20 +11,21 @@ import { SuggestionComponent } from './component/suggestion/suggestion.component
 import { TeamDetailsComponent } from './component/team-details/team-details.component';
 import { TeamComponent } from './component/team/team.component';
 import { UpdateSuggestionComponent } from './component/updatesuggestion/updatesuggestion.component';
+import { AdminGuard } from './shared/admin.guard';
 import { AuthGuard } from './shared/auth.guard';
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent },
+  { path: 'signup', component: SignupComponent,canActivate:[AdminGuard]},
   {path: 'make-suggestion', component:MakeSuggestionComponent,canActivate:[AuthGuard]},
   {path: 'editemployee', component:EditEmployeeComponent,canActivate:[AuthGuard]},
   {path: 'suggestions', component:SuggestionComponent,canActivate:[AuthGuard]},
   {path: 'update-suggestion',component:UpdateSuggestionComponent,canActivate:[AuthGuard]},
    { path: 'dashboard', component: DashboardComponent,canActivate:[AuthGuard]},
   {path: 'teamdetails', component:TeamDetailsComponent,canActivate:[AuthGuard]},
-  { path: 'new-team', component: NewTeamComponent,canActivate:[AuthGuard] },
+  { path: 'new-team', component: NewTeamComponent,canActivate:[AdminGuard] },
   { path: 'team', component: TeamComponent,canActivate:[AuthGuard] },
 ];
 
